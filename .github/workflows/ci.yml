@@ -10,7 +10,7 @@ jobs:
   detect_project:
     runs-on: ubuntu-latest
     outputs:
-      project_folder: ${{steps.select_folder.output.project_folder}}
+      project_folder: ${{ steps.set_folder.outputs.project_folder }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
